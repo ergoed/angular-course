@@ -1,0 +1,32 @@
+
+<h1></h1>
+{{pageTitle}}
+
+<div>
+  Filter by <input type="text">
+</div>
+<table class='table-responsive centered striped' *ngIf='products && products.length'>
+  <thead>
+    <tr>
+      <td><button>Show images</button></td>
+      <td>Product</td>
+      <td>Code</td>
+      <td>Avaiable</td>
+      <td>Price</td>
+      <td>5 Star Rating</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let product of products'>
+      <td><img width="50px" height="50px" style=""src="{{product.imageUrl}}" alt=""></td>
+      <td>{{product.productName}}</td>
+      <td>{{product.productCode}}</td>
+      <td>{{product.releaseDate}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.starRating}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<!--
+<pre>{{products | json}}</pre> -->
