@@ -1,7 +1,9 @@
+// import { APP_ROUTES } from './app.routes'
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './modules/layout/header/header.component';
@@ -23,7 +25,8 @@ import { StarRatingComponent } from './shared/components/star-rating/star-rating
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    // RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
