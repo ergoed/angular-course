@@ -36,7 +36,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let product of products | async'>
+                    <tr *ngFor='let product of products | async | productFilter:textFilter'>
                         <td><img *ngIf="showImage" [src]="product.imageUrl" width="150px" /></td>
                         <td>
                           <a href="javascript:;">
