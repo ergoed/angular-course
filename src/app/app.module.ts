@@ -1,13 +1,15 @@
-import { MaterializeModule } from 'angular2-materialize'
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ProductListComponent } from './products/product-list/product-list.component';
-import { ReversePipe } from './pipe/reverse.pipe';
-import { ProductFilterPipe } from './pipe/product-filter.pipe';
+import { HeaderComponent } from './modules/layout/header/header.component';
+import { ProductListComponent } from './modules/product/product-list/product-list.component';
+import { ProductFilterPipe } from './modules/product/product-list/product-filter.pipe';
+import { ReversePipe } from './shared/pipes/reverse.pipe';
+import { ProductService } from './shared/models/product.service';
+import { StarRatingComponent } from './shared/components/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -15,15 +17,15 @@ import { ProductFilterPipe } from './pipe/product-filter.pipe';
     HeaderComponent,
     ProductListComponent,
     ReversePipe,
-    ProductFilterPipe
-
+    ProductFilterPipe,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,
-    MaterializeModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

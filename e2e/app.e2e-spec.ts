@@ -1,14 +1,14 @@
-import { CliProjectPage } from './app.po';
+import { AngularCoursesAppPage } from './app.po';
 
-describe('cli-project App', () => {
-  let page: CliProjectPage;
+describe('angular-courses-app App', () => {
+  let page: AngularCoursesAppPage;
 
   beforeEach(() => {
-    page = new CliProjectPage();
+    page = new AngularCoursesAppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
