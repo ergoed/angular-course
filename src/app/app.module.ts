@@ -1,4 +1,4 @@
-// import { APP_ROUTES } from './app.routes'
+import { APP_ROUTES } from './app.routes'
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,6 +12,9 @@ import { ProductFilterPipe } from './modules/product/product-list/product-filter
 import { ReversePipe } from './shared/pipes/reverse.pipe';
 import { ProductService } from './shared/models/product.service';
 import { StarRatingComponent } from './shared/components/star-rating/star-rating.component';
+import { WelcomeComponent } from './modules/welcome/welcome.component';
+import { ProductComponent } from './modules/product/product.component';
+import { ProductDetailComponent } from './modules/product/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { StarRatingComponent } from './shared/components/star-rating/star-rating
     ProductListComponent,
     ReversePipe,
     ProductFilterPipe,
-    StarRatingComponent
+    StarRatingComponent,
+    WelcomeComponent,
+    ProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    // RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
